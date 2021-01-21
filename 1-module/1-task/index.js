@@ -4,5 +4,9 @@
  * @returns {number}
  */
 function factorial(n) {
-  // ваш код...
+  let counter = 1;
+  while (n != 0) {
+    counter = counter * n--;
+  }
+  return counter;
 }
