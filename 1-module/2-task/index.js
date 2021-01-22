@@ -28,9 +28,9 @@ function sayHello() {
   let userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
-    alert(`Welcome back, ${userName}!`);
+    print(`Welcome back, ${userName}!`);
   } else {
-    alert('Некорректное имя');
+    print('Некорректное имя');
   }
 }
 
