@@ -6,21 +6,32 @@ function print(text) {
 }
 
 /**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- * @param {string | null} name
- * @returns {boolean}
- */
+* Эту функцию нужно поменять так,
+* чтобы функция sayHello работала корректно
+* @param {string | null} name
+* @returns {boolean}
+*/
 function isValid(name) {
-  // ваш код...
+  if (!name || 0 === name.length || name.length < 4 || name.includes(' ')) {
+    return false;
+  }
+  else {
+    return true;
+  }
 }
 
+
+/**
+* Эту функцию трогать не нужно
+*/
 function sayHello() {
   let userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
-    print(`Welcome back, ${userName}!`);
+    alert(`Welcome back, ${userName}!`);
   } else {
-    print('Некорректное имя');
+    alert('Некорректное имя');
   }
 }
+
+sayHello();
