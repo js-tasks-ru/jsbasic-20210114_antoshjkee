@@ -3,5 +3,13 @@
  * @returns {string}
  */
 function camelize(str) {
-  // ваш код...
+  str = str.split('');
+  for (let key in str) {
+    if (str[key] == "-") {
+      str.splice(key, 1);
+      str[key] = (str[key].toUpperCase());
+    }
+  }
+  return str.join('');
+
 }
